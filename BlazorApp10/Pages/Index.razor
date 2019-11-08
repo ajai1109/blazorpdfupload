@@ -13,7 +13,7 @@
     string base64PDF;
     protected override async Task OnInitializedAsync()
     {
-        Byte[] bytes = File.ReadAllBytes(@"c:\small.pdf");
+        Byte[] bytes = File.ReadAllBytes(@"c:\large.pdf");
         base64PDF = Convert.ToBase64String(bytes, 0, bytes.Length);
         base64PDF = "data:application/pdf;base64," + base64PDF;
     }
